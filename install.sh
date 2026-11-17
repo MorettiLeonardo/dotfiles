@@ -20,12 +20,11 @@ link_file() {
 link_file "$DOTFILES/ghostty/config" \
     "$HOME/.config/ghostty/config"
 
+link_file "$DOTFILES/ghostty/themes" \
+    "$HOME/.config/ghostty/themes"
+
 link_file "$DOTFILES/zsh/.zshrc" \
     "$HOME/.zshrc"
 
-if [ -f "$DOTFILES/zsh/.p10k.zsh" ]; then
-    link_file "$DOTFILES/zsh/.p10k.zsh" \
-        "$HOME/.p10k.zsh"
-fi
 
 echo "Dotfiles installed!"

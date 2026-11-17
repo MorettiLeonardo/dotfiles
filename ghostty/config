@@ -1,67 +1,46 @@
-command = /usr/bin/zsh
+# =========================
+# Omarchy style · T3 Dark
+# =========================
 
+theme = T3 Dark
+window-theme = ghostty
+gtk-toolbar-style = flat
+gtk-titlebar = false
+window-decoration = false
 
-# Font
-font-family = JetBrains Mono
+font-family = JetBrainsMono Nerd Font
+font-style = Regular
 font-size = 12
-font-thicken = true
 
-# Window
+background-opacity = 0.95
+background-blur-radius = 25
+
 window-padding-x = 14
-window-padding-y = 12
-window-decoration = true
-window-theme = dark
+window-padding-y = 14
+window-padding-balance = true
 
-# Background
-background = #0b0b12
-foreground = #e4e4ed
-background-opacity = 0.96
+maximize = true
+# ponytail: maximize é ignorado no GNOME/Wayland em alguns casos; tamanho gigante em células é clampado à tela
+window-width = 1000
+window-height = 1000
 
-# Cursor
 cursor-style = block
-cursor-color = #a78bfa
-cursor-text = #0b0b12
-
-# Selection
-selection-background = #37304f
-selection-foreground = #ffffff
-
-# ==========================================
-# COLOR PALETTE
-# ==========================================
-
-# Normal colors
-palette = 0=#171722
-palette = 1=#ff6b81
-palette = 2=#a6e3a1
-palette = 3=#f9e2af
-palette = 4=#89b4fa
-palette = 5=#cba6f7
-palette = 6=#67e8f9
-palette = 7=#cdd6f4
-
-# Bright colors
-palette = 8=#45455a
-palette = 9=#ff8499
-palette = 10=#b5e8ad
-palette = 11=#fce7b2
-palette = 12=#9bbcff
-palette = 13=#d8b4fe
-palette = 14=#8be9fd
-palette = 15=#ffffff
-
-# ==========================================
-# BEHAVIOR
-# ==========================================
-
-# Hide cursor while typing
-mouse-hide-while-typing = true
-
-# Shell integration
+cursor-style-blink = false
 shell-integration = detect
+shell-integration-features = no-cursor,ssh-env
 
-# Scrollback
-scrollback-limit = 10000
+copy-on-select = clipboard
+confirm-close-surface = false
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0.95
+resize-overlay = never
+scrollback-limit = 100000
+quit-after-last-window-closed = true
 
-# Reload configuration
-keybind = ctrl+shift+comma=reload_config
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+
+keybind = super+control+shift+alt+arrow_down=resize_split:down,100
+keybind = super+control+shift+alt+arrow_up=resize_split:up,100
+keybind = super+control+shift+alt+arrow_left=resize_split:left,100
+keybind = super+control+shift+alt+arrow_right=resize_split:right,100
